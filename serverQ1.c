@@ -19,7 +19,7 @@ int main() {
 
     server.sin_family = AF_INET;
     server.sin_addr.s_addr = inet_addr("192.168.220.129");
-    server.sin_port = htons(8888);
+    server.sin_port = htons(22);
 
     if (bind(sock, (struct sockaddr *) &server, sizeof(server)) < 0) {
         puts("bind failed");
