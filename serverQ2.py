@@ -7,7 +7,9 @@ def fahrenheit_to_celsius(fahrenheit):
 def main():
     #create a TCP socket
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind(('localhost', 1234))
+    host = ''
+    port = 8889
+    server_socket.bind((host, port))
     server_socket.listen(1)
 
     print('Server is ready to receive')
@@ -30,5 +32,5 @@ def main():
         #close socket
         client_socket.close()
 
-if name == 'main':
-    main()
+if __name__ == '__main__':
+   main()
